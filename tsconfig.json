@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "strict": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "typeRoots": ["./node_modules/@types", "./typings"]
+    }
+}

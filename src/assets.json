@@ -1,0 +1,14 @@
+{
+  "audio": [],
+  "json": [],
+  "image": [
+    [
+      "sprite-stardew",
+      "/sprite/stardew.png"
+    ],
+    [
+      "sprite-tiles",
+      "/sprite/tiles.png"
+    ]
+  ]
+}
