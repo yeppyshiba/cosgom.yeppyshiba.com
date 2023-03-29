@@ -39,12 +39,12 @@ export default <Configuration>{
         }),
         new PhaserAssetsWebpackPlugin({
             patterns: [
-                { type: "audio", prefix: "audio-", dir: "/audio", rule: /^\w+\.(m4a|ogg)$/ },
-                { type: "json", prefix: "map-", dir: "/map", rule: /^\w+\.(json)$/ },
-                { type: "image", prefix: "sprite-", dir: "/sprite", rule: /^\w+\.png$/ },
+                { type: "audio", prefix: "audio-", dir: "/assets/audio", rule: /^\w+\.(m4a|ogg)$/ },
+                { type: "tilemapTiledJSON", prefix: "map-", dir: "/assets/map", rule: /^\w+\.(json)$/ },
+                { type: "image", prefix: "sprite-", dir: "/assets/sprite", rule: /^\w+\.png$/ },
             ],
-            documentRoot: "./assets",
-            output: "./src/assets.json",
+            documentRoot: "./",
+            output: "./src/objects/assets.json",
         }),
         new CopyWebpackPlugin({
             patterns: [

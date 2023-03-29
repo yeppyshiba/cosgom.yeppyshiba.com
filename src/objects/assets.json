@@ -1,0 +1,19 @@
+{
+  "audio": [],
+  "tilemapTiledJSON": [
+    [
+      "map-dungeon",
+      "/assets/map/dungeon.json"
+    ]
+  ],
+  "image": [
+    [
+      "sprite-stardew",
+      "/assets/sprite/stardew.png"
+    ],
+    [
+      "sprite-tiles",
+      "/assets/sprite/tiles.png"
+    ]
+  ]
+}

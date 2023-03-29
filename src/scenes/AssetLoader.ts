@@ -1,5 +1,5 @@
 import Scene from "@/enums/Scene";
-//import AssetQueue from "@/properties/AssetQueue";
+import assets from "@/objects/assets.json";
 
 export default class AssetLoader extends Phaser.Scene {
     constructor() {
@@ -31,23 +31,11 @@ export default class AssetLoader extends Phaser.Scene {
             this.scene.start(Scene.MAIN_SCENE);
         });
 
-        /*
-        AssetQueue.forEach((o) => {
-            switch (o.type) {
-                case "image":
-                    this.load.image(o.name, o.path);
-                    break;
-                case "audio":
-                    this.load.audio(o.name, o.path);
-                    break;
-                case "spritesheet":
-                    this.load.spritesheet(o.name, o.path, o.frameConfig);
-                    break;
-                case "bitmap-font":
-                    this.load.bitmapFont(o.name, o.path, o.fontData);
-                    break;
-            }
+        Object.keys(assets).forEach((methodName: string) => {
+            const entries = assets[methodName as keyof typeof assets] as [string, string][];
+            entries.forEach((args: [string, string]) => {
+                this.load[methodName as keyof typeof assets](...args);
+            });
         });
-        */
     }
 }
